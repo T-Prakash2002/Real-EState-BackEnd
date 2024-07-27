@@ -28,9 +28,7 @@ app.use(bodyParser.json());
 const auth = async (req, res, next) => {
   const token = req.headers.authorization;
 
-  console.log(req.path)
-
-  if(req.path == '/api/login' || req.path == '/api/register'){
+  if(req.path == '/api/login' || req.path == '/api/register' || req.path =='/'){
     next();
   }else{
     try{
